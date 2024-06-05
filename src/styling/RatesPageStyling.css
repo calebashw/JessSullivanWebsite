@@ -1,0 +1,71 @@
+.rates-page-container {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+.services-header {
+    display: flex;
+    justify-content: center;
+}
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-left: 40px;
+    position: relative;
+    /* margin-left: 10%; */
+}
+.services ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.services li {
+    text-align: center;
+    font-family: 'Bellefair', 'Bellefair Fallback', serif;
+    font-size: 18px;
+    margin-right: 35px;
+}
+.descriptions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.descriptions ul {
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+    padding: 0;
+    width: 80%;
+    /* align-items: ; */
+}
+.descriptions li {
+    text-align: left;
+    margin-bottom: 3em;
+    line-height: 1.5;
+    font-size: 14px;
+    font-family: 'Bellefair', 'Bellefair Fallback', serif;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+footer ul li {
+    margin-right: 20px;
+    cursor: pointer;
+}

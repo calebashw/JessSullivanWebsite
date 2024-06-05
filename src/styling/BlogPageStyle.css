@@ -1,0 +1,15 @@
+.blog-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+footer ul li {
+    margin-right: 20px;
+    cursor: pointer;
+}

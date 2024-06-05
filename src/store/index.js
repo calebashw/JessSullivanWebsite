@@ -1,14 +1,13 @@
 import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
-import { immer } from 'zustand/middleware/immer';
 
-const useStore = create(devtools(immer((set) => {
-  return {
-    count: 0,
-    // careful with this syntax if 2nd arg is true it will replace all state rather than merge
-    increment: () => set((draftState) => { draftState.count += 1; }, false, 'count/increment'),
-    decrement: () => set((draftState) => { draftState.count -= 1; }, false, 'count/decrement'),
-  };
-})));
+const useStore = create((set) => ({
+  name: '',
+  email: '',
+  message: '',
+  setName: (name) => set({ name }),
+  setEmail: (email) => set({ email }),
+  setMessage: (message) => set({ message }),
+  resetForm: () => set({ name: '', email: '', message: '' }),
+}));
 
 export default useStore;

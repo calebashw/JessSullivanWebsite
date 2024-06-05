@@ -23,7 +23,9 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
     "@vitejs/plugin-react": "^4.2.1",
+    "antd": "^5.18.0",
     "axios": "^1.6.8",
     "immer": "^10.0.4",
     "jquery": "^3.7.1",
