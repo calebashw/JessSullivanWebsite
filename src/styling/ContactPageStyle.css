@@ -4,6 +4,27 @@
     align-items: center;
     flex-direction: column;
 }
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.contact-section ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.contact-section ul li {
+    display: flex;
+    margin-right: 70px;
+    font-size: 12px;
+    flex-direction: column;
+    font-family: 'Bellefair', 'Bellefair Fallback', serif;
+    justify-content: center;
+    align-items: center;
+}
 footer ul {
     display: flex;
     flex-direction: row;
