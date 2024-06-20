@@ -7,6 +7,7 @@ import {
 } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { useNavigate, useLocation } from 'react-router-dom';
+import '../styling/NavStyle.css';
 
 const items = [
   {
@@ -57,7 +58,7 @@ function NavBar() {
   };
 
   return (
-    <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+    <Menu className="navbar" onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
   );
 }
 
