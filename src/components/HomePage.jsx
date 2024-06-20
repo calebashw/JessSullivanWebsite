@@ -3,56 +3,59 @@ import {
   Button,
   Form,
   Input,
-  // InputNumber,
-  Mentions,
+  Image,
+  // Mentions,
   Select,
 } from 'antd';
+import { PhoneOutlined } from '@ant-design/icons';
 import NavBar from './NavBar';
 import '../styling/HomePageStyling.css';
 
-const formItemLayout = {
-  labelCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 6,
-    },
+const phoneNumberRules = [
+  {
+    required: true,
+    message: 'Please input your phone number!',
   },
-  wrapperCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 14,
-    },
+  {
+    pattern: /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/,
+    message: 'Phone number must be in a valid format, e.g., (123) 456-7890.',
   },
-};
+];
+
+function ImageWithText() {
+  return (
+    <div className="image-container">
+      <Image preview={false} src="/img/jessartmuseum-155.jpg" className="background-image" />
+      <div className="overlay-text">
+        <h1>Coach Jessica Sullivan</h1>
+        <h2>Feel better. Live better.</h2>
+      </div>
+    </div>
+  );
+}
 
 function HomePage() {
   return (
     <div className="home-page-container">
       <NavBar />
+      {/* <Image preview={false} src="/img/jessartmuseum-155.jpg" /> */}
+      <ImageWithText />
       <h1 className="training-header">Personal Training & Nutrition Help</h1>
-
       <div className="send-message-form">
         <Form
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...formItemLayout}
-          variant="filled"
+          labelCol={{ xs: { span: 24 }, sm: { span: 6 } }}
+          wrapperCol={{ xs: { span: 24 }, sm: { span: 14 } }}
           style={{
-            maxWidth: 1000,
+            maxWidth: 600, // Adjusted to a reasonable width
           }}
         >
           <Form.Item
             label="Name"
             name="name"
-            layout="vertical"
-            style={{ width: 1000, marginBottom: 33 }}
             rules={[
               {
                 required: true,
-                message: 'Please input!',
+                message: 'Please input your name!',
               },
             ]}
           >
@@ -62,67 +65,79 @@ function HomePage() {
           <Form.Item
             label="Email"
             name="email"
-            layout="vertical"
-            style={{ width: 1000, marginBottom: 33 }}
             rules={[
               {
                 required: true,
-                message: 'Please input!',
+                message: 'Please input your email!',
+              },
+              {
+                type: 'email',
+                message: 'Please enter a valid email!',
               },
             ]}
           >
-            {/* <InputNumber
-              style={{
-                width: '100%',
-              }}
-            /> */}
-            {/* <InputDeviceInfo /> */}
             <Input />
           </Form.Item>
 
           <Form.Item
-            label="TextArea"
-            name="TextArea"
-            layout="vertical"
-            style={{ width: 1000, marginBottom: 40 }}
-            rules={[
-              {
-                required: true,
-                message: 'Please input!',
-              },
-            ]}
+            name="phone"
+            label="Phone Number"
+            rules={phoneNumberRules}
           >
-            <Input.TextArea />
+            <Input
+              prefix={<PhoneOutlined />}
+              placeholder="Enter your phone number"
+              maxLength={15}
+            />
           </Form.Item>
 
-          <Form.Item
+          {/* <Form.Item
             label="Mentions"
-            name="Mentions"
-            layout="vertical"
-            style={{ width: 1000, marginBottom: 30 }}
+            name="mentions"
             rules={[
               {
                 required: true,
-                message: 'Please input!',
+                message: 'Please input mentions!',
               },
             ]}
           >
             <Mentions />
-          </Form.Item>
-
+          </Form.Item> */}
           <Form.Item
-            label="Select"
-            name="Select"
-            layout="vertical"
-            style={{ width: 1000, marginBottom: 45 }}
+            name="age"
+            label="Age"
             rules={[
               {
                 required: true,
-                message: 'Please input!',
+                message: 'Please input your name!',
               },
             ]}
           >
-            <Select />
+            <Input maxLength={5} />
+          </Form.Item>
+
+          <Form.Item
+            label="Gender"
+            name="gender"
+            rules={[
+              {
+                required: true,
+                message: 'Please make a selection!',
+              },
+            ]}
+          >
+            <Select
+              options={[
+                {
+                  value: 'male',
+                  label: 'Male',
+                },
+                {
+                  value: 'female',
+                  label: 'Female',
+                },
+              ]}
+            />
           </Form.Item>
 
           <Button type="primary" htmlType="submit">
