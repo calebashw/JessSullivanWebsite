@@ -8,6 +8,7 @@ import {
   Select,
 } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
+import emailjs from 'emailjs-com';
 import NavBar from './NavBar';
 import '../styling/HomePageStyling.css';
 
@@ -35,6 +36,19 @@ function ImageWithText() {
 }
 
 function HomePage() {
+  const onFinish = (values) => {
+    // Send email using EmailJS
+    emailjs.send('service_36ao2ai', 'template_z3lxjit', values, 'FUGDPYqYGle-23aHn')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+        alert('Failed to send message. Please try again later.');
+      });
+  };
+
   return (
     <div className="home-page-container">
       <NavBar />
@@ -48,6 +62,7 @@ function HomePage() {
           style={{
             maxWidth: 600, // Adjusted to a reasonable width
           }}
+          onFinish={onFinish}
         >
           <Form.Item
             label="Name"
@@ -129,18 +144,50 @@ function HomePage() {
             <Select
               options={[
                 {
-                  value: 'male',
+                  value: 'Male',
                   label: 'Male',
                 },
                 {
-                  value: 'female',
+                  value: 'Female',
                   label: 'Female',
                 },
               ]}
             />
           </Form.Item>
 
-          <Button type="primary" htmlType="submit">
+          <Form.Item
+            label="Fitness Level"
+            name="fitness_level"
+            rules={[
+              {
+                required: true,
+                message: 'Please make a selection!',
+              },
+            ]}
+          >
+            <Select
+              options={[
+                {
+                  value: 'Very fit',
+                  label: 'I am very fit and looking for tightening and strengthening tips',
+                },
+                {
+                  value: 'Okay fitness',
+                  label: 'I am okay, could use some help',
+                },
+                {
+                  value: 'Health issue',
+                  label: 'I have a health issue, need lifestyle change',
+                },
+                {
+                  value: 'Terrible',
+                  label: 'I feel terrible in the morning and do not know why',
+                },
+              ]}
+            />
+          </Form.Item>
+
+          <Button type="primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} htmlType="submit">
             Submit
           </Button>
         </Form>

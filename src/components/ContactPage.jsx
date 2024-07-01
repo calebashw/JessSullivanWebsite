@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'antd';
 import NavBar from './NavBar';
 import '../styling/ContactPageStyle.css';
 
@@ -6,7 +7,8 @@ function ContactPage() {
   return (
     <div className="contact-page-container">
       <NavBar />
-      <h1>contact page</h1>
+      <Image src="/img/area_map.jpeg" preview={false} width={700} />
+      <h1>Email below</h1>
       <div className="contact-section">
         <ul>
           <li><i className="fas fa-envelope fa-2x" />

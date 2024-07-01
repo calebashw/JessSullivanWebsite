@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   DollarOutlined,
-  FormOutlined,
+  // FormOutlined,
   HomeOutlined,
   MailOutlined,
 } from '@ant-design/icons';
@@ -22,12 +22,12 @@ const items = [
     icon: <MailOutlined />,
     path: '/contact',
   },
-  {
-    label: 'Blog',
-    key: 'blog',
-    icon: <FormOutlined />,
-    path: '/blog',
-  },
+  // {
+  //   label: 'Blog',
+  //   key: 'blog',
+  //   icon: <FormOutlined />,
+  //   path: '/blog',
+  // },
   {
     label: 'Services and Rates',
     key: 'services',

@@ -69,3 +69,31 @@ footer ul li {
     margin-right: 20px;
     cursor: pointer;
 }
+/* .rates-page-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  } */
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
