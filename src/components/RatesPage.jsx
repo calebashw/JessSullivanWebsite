@@ -59,7 +59,7 @@ function RatesPage() {
         <Image preview={false} src="/img/jessartmuseum-31.jpg" className="background-image" />
         <div className="overlay-text">
           Personal training, nutrition consultation,<br />
-          kitchen clean out, grocery trip I can do it all!
+          kitchen clean out, grocery trip let&#39;s go!
         </div>
       </div>
       <div className="services">

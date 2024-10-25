@@ -1,20 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .home-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    /* height: 100vh; */
 }
 
 .image-container {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh; /* Make the image container take the full viewport height */
     text-align: center;
     overflow: hidden; /* Ensure content doesn't overflow */
+    margin: 0;
 }
 
 .background-image {
     width: 100%;
     height: 100%;
+    padding: 0;
+    margin: 0;
     object-fit: cover; /* Cover the entire container */
 }
 
@@ -24,6 +36,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 

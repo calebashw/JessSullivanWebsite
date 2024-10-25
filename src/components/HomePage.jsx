@@ -124,7 +124,7 @@ function HomePage() {
             rules={[
               {
                 required: true,
-                message: 'Please input your name!',
+                message: 'Please input your age!',
               },
             ]}
           >

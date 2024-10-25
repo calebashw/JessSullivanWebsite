@@ -82,17 +82,18 @@ footer ul li {
   .background-image {
     width: 100%;
     height: auto;
+    filter: brightness(70%);
   }
   
   .overlay-text {
     position: absolute;
-    top: 50%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 34px;
     color: white;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: Adds a semi-transparent background */
     padding: 10px;
     border-radius: 10px;
   }
