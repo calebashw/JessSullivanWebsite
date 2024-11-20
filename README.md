@@ -8,4 +8,7 @@ It contains three pages split into three components, along with a NavBar compone
 
 Overall this saved her $200/month, as she had previously been using a website maker and hoster that charged her $200/month, an unnecessary expense considering her needs. She now gets all she needs out of her website for free.
 
+**NOTE:**
+**PLEASE DO NOT** use the form feature if you're not interested in her servives out of a courtesy to her. I promise it works but using it will spam her email.
+
 The hosted version can be found here: [Jessica Sullivan Website](https://jessicasullivan.onrender.com/)
