@@ -5,7 +5,6 @@ import {
 import { createRoot } from 'react-dom/client';
 import HomePage from './components/HomePage';
 import ContactPage from './components/ContactPage';
-import BlogPage from './components/BlogPage';
 import RatesPage from './components/RatesPage';
 import './style.scss';
 
@@ -34,7 +33,6 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'contact', element: <ContactPage /> },
-      { path: 'blog', element: <BlogPage /> },
       { path: 'services-and-rates', element: <RatesPage /> },
       { path: '*', element: <FallBack /> },
     ],
